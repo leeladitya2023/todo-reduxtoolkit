@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  todo-frontend:
+    build:
+      context: ..
+      dockerfile: REACT/11todoReduxToolkit/Dockerfile
+    image: todo-reduxtoolkit:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
